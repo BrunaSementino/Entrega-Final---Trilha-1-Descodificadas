@@ -1,3 +1,6 @@
+Link para visualização da apresentação: https://youtu.be/qED06BzPto4
+
+
 # Entrega-Final---Trilha-1-Descodificadas
 
 Site criado com o intuito de desenvolver todas as técnicas aprendidas na trilha1 do projeto descodificadas.
