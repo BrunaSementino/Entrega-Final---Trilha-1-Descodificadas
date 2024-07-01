@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periférico</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      border: none;
+      text-decoration: none;
+      font-family: 'KoHo', sans-serif;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      font-size: 62.5%;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(rgba(246, 237, 248, 0.4), rgba(252, 252, 252, 0.4)), url(./img/fundo3.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+  
+    .content {
+      width: 100vw;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c99cf3;
+      position: fixed;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h3 {
+      color: white;
+      font-size: 1.6rem;
+    }
+
+    .content .list-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.content .list-menu li a {
+  padding: 1rem 2rem; 
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 200ms ease-in;
+}
+
+    
+    .first-section {
+      height: 100vh;
+      background-image: linear-gradient(rgba(246, 237, 248, 0.4), rgba(252, 252, 252, 0.4)), url(./img/fundo3.jpg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 0px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .first-section .conteudo-principal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .first-section h1 {
+      color: #c188f7;
+      font-size: 3.6rem;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    .first-section h2 {
+      color: #c188f7;
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    .footer {
+  width: 100vw;
+  background-color: #c99cf3;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer p {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-menu li {
+  display: flex;
+  align-items: center;
+}
+
+.footer-menu li a {
+  color: white;
+  font-size: 2rem;
+  transition: color 200ms ease-in;
+}
+
+.footer-menu li a:hover {
+  color: #c188f7;
+}
+
+.Representação img {
+      max-width: 400px;
+      margin-left: 20px;
+      border-radius: 8px;
+      float: right;
+    }
+
+    .Representação {
+      display: flex;
+      margin-bottom: 20px;
+      float: right;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .Representação h3 {
+      font-size: 2rem;
+      color: #333;
+      float: right;
+    }
+
+    .content-additional {
+      margin-top: 70px; 
+      padding: 20px;
+      width: 100%;
+      background-color: rgba(246, 237, 248, 0.4);
+      flex: 1;
+    }
+
+    .content-additional h1 {
+      margin-bottom: 20px;
+      font-size: 3rem;
+    }
+
+    .content-additional ul {
+      font-size: 2.3rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="content">
+    <div class="logo">
+      <img src="img/logo.jpeg" alt="Logo">
+      <h3>HemoGen Diagnósticos</h3>
+    </div>
+    <nav class="menu-container">
+      <ul class="list-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-nos.html">Sobre nós</a></li>
+        <li><a href="am.html">Medular</a></li>
+        <li><a href="am2.html">Sangue Periférico</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+        <li><a href="https://www.linkedin.com/in/bruna-sementino-9a9086137/"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="https://github.com/BrunaSementino?tab=repositories"><i class="bi bi-github"></i></a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class="content-additional">
+    <h1 id="sanguePeriferico">Sangue Periférico</h1>
+    <div class="Representação">
+      <h3>Coleta de Sangue Periférico</h3>
+      <img src="img/coleta p.jpg" alt="Representação">
+    </div>
+    <ul>
+      <li>Hemograma completo</li>
+      <li>Contagem de leucócitos, hemácias e plaquetas no sangue periférico</li>
+      <li>Imunofenotipagem por citometria de fluxo em células do sangue periférico</li>
+      <li>Dosagem de hemoglobina e hematócrito no sangue periférico</li>
+      <li>Teste de coagulação (ex: tempo de protrombina e tempo de tromboplastina parcial ativada)</li>
+      <li>Estudo morfológico das células sanguíneas em esfregaços</li>
+      <li>Avaliação de reticulócitos no sangue periférico</li>
+      <li>Dosagem de vitamina B12 e ácido fólico no sangue periférico</li>
+      <li>Testes genéticos/moleculares para infecções virais (ex: HIV, hepatite)</li>
+      <li>Dosagem de marcadores tumorais no sangue periférico</li>
+      <li>Testes genéticos específicos no sangue periférico (ex: PCR para mutações)</li>
+      <li>Estudo da resposta imune no sangue periférico (ex: dosagem de imunoglobulinas)</li>
+    </ul>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 HemoGen Diagnósticos. Todos os direitos reservados. Desenvolvido por Bruna Sementino - Destinado a fins acadêmicos</p>
+         <ul class="footer-menu">
+        <li><a href="https://www.linkedin.com/in/bruna-sementino-9a9086137/"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="https://github.com/BrunaSementino?tab=repositories"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

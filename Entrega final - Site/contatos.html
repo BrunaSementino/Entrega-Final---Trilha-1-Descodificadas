@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+      font-family: 'KoHo', sans-serif;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      font-size: 62.5%;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(rgba(246, 237, 248, 0.4), rgba(252, 252, 252, 0.4)), url('./img/fundo3.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      max-height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h3 {
+      color: white;
+      font-size: 1.6rem;
+    }
+
+    .menu-container {
+      width: 100vw;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #c99cf3;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      padding: 0 1rem;
+    }
+
+    .menu-container .list-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .menu-container .list-menu li a {
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 200ms ease-in;
+    }
+
+    .menu-container .list-menu li a:hover {
+      color: #c188f7;
+    }
+
+    .content {
+      width: 90%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: justify;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h1 {
+      color: #c188f7;
+      font-size: 2.6rem; /* Reduzido o tamanho da fonte */
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .content ul {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      color: #333;
+      padding-left: 2rem;
+    }
+
+    .content ul li {
+      margin-bottom: 1rem;
+    }
+
+    .content ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    .content form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .content form input,
+    .content form textarea,
+    .content form button {
+      font-size: 1.6rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .content form button {
+      background-color: #c188f7;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 200ms ease-in;
+    }
+
+    .content form button:hover {
+      background-color: #a065d1;
+    }
+
+    .success-message {
+      display: none;
+      font-size: 1.6rem;
+      color: green;
+      margin-top: 1rem;
+    }
+
+    .map-container {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 85%;
+  border: none;
+}
+
+
+    .footer {
+      width: 100%;
+      background-color: #c99cf3;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .footer p {
+      color: white;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .footer-menu {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-menu li {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-menu li a {
+      color: white;
+      font-size: 2rem;
+      transition: color 200ms ease-in;
+    }
+
+    .footer-menu li a:hover {
+      color: #c188f7;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu-container">
+    <div class="logo">
+      <img src="./img/logo.jpeg" alt="Logo HemoGen Diagnósticos">
+      <h3>HemoGen Diagnósticos</h3>
+    </div>
+    <ul class="list-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre-nos.html">Sobre nós</a></li>
+      <li><a href="am.html">Medular</a></li>
+      <li><a href="am2.html">Sangue Periférico</a></li>
+      <li><a href="contatos.html">Contatos</a></li>
+      <li><a href="https://www.linkedin.com/in/bruna-sementino-9a9086137/"><i class="bi bi-linkedin"></i></a></li>
+      <li><a href="https://github.com/BrunaSementino?tab=repositories"><i class="bi bi-github"></i></a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <h1>Contatos</h1>
+    <ul>
+      <li>Email: contato@hemogen.com.br</li>
+      <li>Telefone: (19) 1234-5678</li>
+    </ul>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="message" rows="5" maxlength="500" placeholder="Sua mensagem (até 500 caracteres)" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="success-message" id="success-message">Mensagem enviada com sucesso!</p>
+    <div class="map-container">
+      <ul>
+        <li>Endereço: Universidade Estadual de Campinas - R. Carlos Chagas, 480 - Cidade Universitária, Campinas - SP, 13083-878</li>
+      </ul>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.242688620973!2d-47.06263438503414!3d-22.8184818850599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8cf3ab1d97f23%3A0x10c4b5e9b31920d4!2sHemocentro%20Unicamp!5e0!3m2!1sen!2sbr!4v1624000955532!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    <p>
+      <a href="https://www.waze.com/pt-BR/live-map/directions/hemocentro-unicamp-r.-carlos-chagas-480-barao-geraldo-(campinas)?to=place.w.205063716.2050899301.2622979" target="_blank">Abrir no Waze</a> |
+      <a href="https://www.google.com/maps/dir/-22.8723228,-47.1384868/hemocentro+unicamp/@-22.8678439,-47.1781458,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94c8c6a6b3183c95:0xf13cce636ebbea7d!2m2!1d-47.0623756!2d-22.8286888?entry=ttu" target="_blank">Abrir no Google Maps</a>
+    </p>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 HemoGen Diagnósticos. Todos os direitos reservados. Desenvolvido por Bruna Sementino - Destinado a fins acadêmicos</p>
+      <ul class="footer-menu">
+        <li><a href="https://www.linkedin.com/in/bruna-sementino-9a9086137/"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="https://github.com/BrunaSementino?tab=repositories"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('success-message').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
